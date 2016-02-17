@@ -2,6 +2,7 @@
 		<footer class="footer">
 			<div class="container row">
 				<div class="col-xs-6 col-md-3">
+					<h4>Contact Us</h4>
 					<p>
 						<i class="fa fa-map-marker"></i>
 						KW18B,<br> 
@@ -21,6 +22,7 @@
 				<?php endif; ?>
 				</div>
 				<div class="col-xs-12 col-md-3">
+					<h4>Our Quality Certifications</h4>
 					<img src="<?php echo get_template_directory_uri(); ?>/static/UKAS Logo (generic).jpg" alt="UKAS Logo" title="UKAS Logo" height="125">
 					<img src="<?php echo get_template_directory_uri(); ?>/static/MCCAA Logo.jpg" alt="MCCAA Logo" title="MCCAA Logo" height="125">
 				</div>
