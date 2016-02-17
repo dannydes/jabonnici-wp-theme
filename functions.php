@@ -1,6 +1,7 @@
 <?php
 
 require 'includes/social-widget.php';
+require 'includes/contact-widget.php';
 
 function jabon_setup() {
 	register_nav_menus(array(
@@ -22,11 +23,39 @@ function jabon_active_menu_item( $menu_item_name ) {
 }
 
 function jabon_widgets_init() {
+	register_widget( 'JABon_Contact_Widget' );
 	register_widget( 'JABon_Social_Widget' );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer Column 1', 'jabon_footer_col_1' ),
+		'id' => 'footer-col-1',
+		'description' => '1st footer column.',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer Column 2', 'jabon_footer_col_2' ),
+		'id' => 'footer-col-2',
+		'description' => '2nd footer column.',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Footer Column 3', 'jabon_footer_col_3' ),
 		'id' => 'footer-col-3',
 		'description' => '3rd footer column.',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Footer Column 4', 'jabon_footer_col_4' ),
+		'id' => 'footer-col-4',
+		'description' => '4th footer column.',
+		'before_widget' => '',
+		'after_widget' => '',
 	) );
 }
 

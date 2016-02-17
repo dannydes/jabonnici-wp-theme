@@ -4,7 +4,7 @@ class JABon_Social_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'jabon_social_widget',
-			__( 'Social Buttons Widget', 'A place where to place your social buttons.' ),
+			__( 'Social Buttons', 'A place where to place your social buttons.' ),
 			array( 'description' => __( 'Social Buttons Widget', 'A place where to place your social buttons.' ), )
 		);
 	}
