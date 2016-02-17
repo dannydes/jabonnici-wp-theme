@@ -1,9 +1,10 @@
 <?php
 
+require 'includes/social-widget.php';
+
 function jabon_setup() {
 	register_nav_menus(array(
 		'primary' => __( 'Primary Menu', 'jabon' ),
-		'social' => __( 'Social Links Menu', 'jabon' ),
 	));
 }
 
@@ -16,16 +17,17 @@ function jabon_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'jabon_enqueue_scripts' );
 
-function jabon_social_icon( $url ) {
-	if ( strpos( $url, 'facebook.com' ) !== FALSE ) {
-		?><i class="fa fa-facebook"></i><?php
-	} else if ( strpos( $url, 'twitter.com' ) !== FALSE ) {
-		?><i class="fa fa-twitter"></i><?php
-	} else if ( strpos( $url, 'instagram.com' ) !== FALSE ) {
-		?><i class="fa fa-instagram"></i><?php
-	}
-}
-
 function jabon_active_menu_item( $menu_item_name ) {
 	if ( substr( wp_title( '', FALSE ), 2 ) === $menu_item_name || ( $menu_item_name === 'Home' && wp_title( '', FALSE ) === '' ) ): ?> class="active"<?php endif;
 }
+
+function jabon_widgets_init() {
+	register_widget( 'JABon_Social_Widget' );
+	register_sidebar( array(
+		'name' => __( 'Footer Column 3', 'jabon_footer_col_3' ),
+		'id' => 'footer-col-3',
+		'description' => '3rd footer column.',
+	) );
+}
+
+add_action( 'widgets_init', 'jabon_widgets_init' );

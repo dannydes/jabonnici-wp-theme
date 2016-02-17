@@ -22,14 +22,6 @@
 				<noscript>
 					<div>Your JavaScript is disabled - this might hurt your experience. Please follow these <a href="http://www.enable-javascript.com/" target="_blank">steps</a>.</div>
 				</noscript> 
-				<div class="social-buttons"><?php
-					$menu_items = wp_get_nav_menu_items( 'social');//$menu->term_id );
-							
-							foreach ( (array) $menu_items as $key => $menu_item ) {
-								?><a href="<?php echo $menu_item->url; ?>" target="_blank" title="<?php echo $menu_item->title; ?>"><?php echo jabon_social_icon( $menu_item->url ); ?></a><?php
-							}
-					?>
-				</div>
 				<div class="collapse navbar-collapse" id="main-menu">
 					<ul class="nav navbar-nav navbar-right"><?php
 						$locations = get_nav_menu_locations();
