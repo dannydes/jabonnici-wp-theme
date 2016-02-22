@@ -23,19 +23,14 @@
 					<div>Your JavaScript is disabled - this might hurt your experience. Please follow these <a href="http://www.enable-javascript.com/" target="_blank">steps</a>.</div>
 				</noscript> 
 				<div class="collapse navbar-collapse" id="main-menu">
-					<ul class="nav navbar-nav navbar-right"><?php
-						$locations = get_nav_menu_locations();
-						//if ( $locations = get_nav_menu_locations() && isset( $locations[ 'custom_menu_slug' ] ) ) {
-							$menu = wp_get_nav_menu_object( $locations[ 'custom_menu_slug' ] );
-							$menu_items = wp_get_nav_menu_items( 'primary');//$menu->term_id );
-							
-							foreach ( (array) $menu_items as $key => $menu_item ) {
-								?><li<?php jabon_active_menu_item( $menu_item->title ); ?>><a href="<?php echo $menu_item->url; ?>"><?php echo $menu_item->title; ?></a></li><?php
-							}
-						//}
+					<?php
 						
-						?>
-					</ul>
+						wp_nav_menu( array(
+							'menu' => 'primary',
+							'menu_class' => 'nav navbar-nav navbar-right',
+						) );
+						
+					?>
 				</div>
 			</div>
 		</nav>

@@ -9,6 +9,17 @@ function jabon_setup() {
 	));
 }
 
+add_action( 'after_setup_theme', 'jabon_setup' );
+
+function jabon_active_nav_class( $classes, $item ) {
+	if ( in_array( 'current-menu-item', $classes ) ) {
+		$classes[] = 'active';
+	}
+	return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'jabon_active_nav_class', 10, 2 );
+
 function jabon_enqueue_scripts() {
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/static/bootstrap/css/bootstrap.min.css', '', '3' );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
