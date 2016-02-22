@@ -29,10 +29,6 @@ function jabon_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'jabon_enqueue_scripts' );
 
-function jabon_active_menu_item( $menu_item_name ) {
-	if ( substr( wp_title( '', FALSE ), 2 ) === $menu_item_name || ( $menu_item_name === 'Home' && wp_title( '', FALSE ) === '' ) ): ?> class="active"<?php endif;
-}
-
 function jabon_widgets_init() {
 	register_widget( 'JABon_Contact_Widget' );
 	register_widget( 'JABon_Social_Widget' );
