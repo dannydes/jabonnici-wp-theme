@@ -19,9 +19,6 @@
 					</button>
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo(); ?></a>
 				</div>
-				<noscript>
-					<div>Your JavaScript is disabled - this might hurt your experience. Please follow these <a href="http://www.enable-javascript.com/" target="_blank">steps</a>.</div>
-				</noscript>
 				<div class="collapse navbar-collapse" id="main-menu">
 					<?php
 						
@@ -35,3 +32,6 @@
 			</div>
 		</nav>
 		<div class="container">
+			<noscript>
+				<div class="alert alert-warning">Your JavaScript is disabled - this might hurt your experience. Please follow these <a href="http://www.enable-javascript.com/" target="_blank">steps</a>.</div>
+			</noscript>
