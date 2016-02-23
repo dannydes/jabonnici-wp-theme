@@ -21,7 +21,7 @@
 				</div>
 				<noscript>
 					<div>Your JavaScript is disabled - this might hurt your experience. Please follow these <a href="http://www.enable-javascript.com/" target="_blank">steps</a>.</div>
-				</noscript> 
+				</noscript>
 				<div class="collapse navbar-collapse" id="main-menu">
 					<?php
 						
@@ -35,4 +35,3 @@
 			</div>
 		</nav>
 		<div class="container">
-	
