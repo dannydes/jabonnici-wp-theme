@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="<?php echo get_bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<title><?php echo get_bloginfo(); if ( wp_title( '', FALSE ) !== '' ): ?> -<?php wp_title( '' ); endif; ?></title>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -18,6 +16,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo(); ?></a>
+					<p class="navbar-text hidden-md hidden-sm hidden-xs"><?php echo get_bloginfo( 'description' ); ?></p>
 				</div>
 				<div class="collapse navbar-collapse" id="main-menu">
 					<?php
