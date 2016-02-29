@@ -25,6 +25,15 @@ function jabon_active_nav_class( $classes, $item ) {
 	if ( in_array( 'current-menu-item', $classes ) ) {
 		$classes[] = 'active';
 	}
+	/*
+	if ( in_array( 'menu-item-has-children', $classes ) ) {
+		$classes[] = 'dropdown';
+	}
+	
+	if ( in_array( 'sub-menu', $classes ) ) {
+		$classes[] = 'dropdown-menu';
+	}*/
+	
 	return $classes;
 }
 

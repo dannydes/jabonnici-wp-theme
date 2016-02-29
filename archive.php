@@ -1,17 +1,7 @@
-<?php
-
-/*
-Theme Name: J. & A. Bonnici
-Author: Daniel Desira
-Author URI: http://dannydes.github.io
-Version: 0.1
-*/
-
-get_header();
-
-?>
+<?php get_header(); ?>
 <div class="page-header">
-	<h1><?php single_post_title(); ?></h1>
+	<h1><?php the_archive_title(); ?></h1>
+	<p><?php the_archive_description(); ?></p>
 </div>
 <div class="row">
 <?php
