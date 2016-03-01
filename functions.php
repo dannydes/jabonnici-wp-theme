@@ -82,3 +82,18 @@ function jabon_widgets_init() {
 }
 
 add_action( 'widgets_init', 'jabon_widgets_init' );
+
+function jabon_custom_excerpt_length( $length ) {
+	return 30;
+}
+
+add_filter( 'excerpt_length', 'jabon_custom_excerpt_length', 999 );
+
+function jabon_excerpt_more() {
+	return '<a class="btn btn-default" href="' .
+		esc_url( get_permalink( get_the_ID() ) ) .
+		'">' . __( 'Read more...', 'jabonnici' ) .
+		'</a>';
+}
+
+add_filter( 'excerpt_more', 'jabon_excerpt_more' );
