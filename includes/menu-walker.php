@@ -1,6 +1,11 @@
 <?php
 
 class JABon_Nav_Menu_Walker extends Walker_Nav_Menu {
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+	}
+	
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
@@ -25,8 +30,12 @@ class JABon_Nav_Menu_Walker extends Walker_Nav_Menu {
 
 		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 		
-		if ( $depth > 0 ) {
-			
+		if ( in_array( 'menu-item-has-children', $classes )	) {
+			$atts['class'] = 'dropdown-toggle';
+			$atts['data-toggle'] = 'dropdown';
+			$atts['role'] = 'button';
+			$atts['aria-haspopup'] = 'true';
+			$atts['aria-expanded'] = 'false';
 		}
 
 		$attributes = '';
@@ -44,7 +53,7 @@ class JABon_Nav_Menu_Walker extends Walker_Nav_Menu {
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . $title . $args->link_after;
-		$item_output .= '</a>';
+		$item_output .= ( in_array( 'menu-item-has-children', $classes ) ? '<span class="caret"></span>' : '' ) . '</a>';
 		$item_output .= $args->after;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );

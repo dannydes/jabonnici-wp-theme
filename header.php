@@ -1,3 +1,4 @@
+<?php require 'includes/menu-walker.php'; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -27,6 +28,7 @@
 						wp_nav_menu( array(
 							'menu' => 'primary',
 							'menu_class' => 'nav navbar-nav navbar-right',
+							'walker' => new JABon_Nav_Menu_Walker(),
 						) );
 						
 					?>
