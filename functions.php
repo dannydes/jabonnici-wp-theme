@@ -2,6 +2,7 @@
 
 require 'includes/social-widget.php';
 require 'includes/contact-widget.php';
+require 'includes/certifications-widget.php';
 
 function jabon_setup() {
 	register_nav_menus(array(
@@ -47,6 +48,7 @@ add_action( 'wp_enqueue_scripts', 'jabon_enqueue_scripts' );
 function jabon_widgets_init() {
 	register_widget( 'JABon_Contact_Widget' );
 	register_widget( 'JABon_Social_Widget' );
+	register_widget( 'JABon_Certifications_Widget' );
 	
 	register_sidebar( array(
 		'name' => __( 'Footer Column 1', 'jabon_footer_col_1' ),
