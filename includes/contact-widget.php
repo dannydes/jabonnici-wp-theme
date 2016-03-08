@@ -23,10 +23,10 @@ class JABon_Contact_Widget extends WP_Widget {
 			<?php echo esc_attr( $instance['address_line_4'] ); ?>.
 		</p>
 		<p>
-			<a href="tel:+356<?php echo esc_url( $phone ); ?>"><i class="fa fa-phone"></i> +356 <?php echo esc_attr( $phone ); ?></a>
+			<a href="tel:+356<?php echo esc_attr( $phone ); ?>"><i class="fa fa-phone"></i> +356 <?php echo esc_attr( $phone ); ?></a>
 		</p>
 		<p>
-			<a href="mailto:<?php echo esc_url( $email ); ?>"><i class="fa fa-envelope"></i> <?php echo esc_attr( $email ); ?></a>
+			<a href="mailto:<?php echo esc_attr( $email ); ?>"><i class="fa fa-envelope"></i> <?php echo esc_attr( $email ); ?></a>
 		</p>
 		<?php
 		
