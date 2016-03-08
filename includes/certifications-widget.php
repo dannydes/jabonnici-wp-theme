@@ -10,16 +10,22 @@ class JABon_Certifications_Widget extends WP_Widget {
 	}
 	
 	public function widget( $args, $instance ) {
-		?><h4>Quality Certifications</h4><?php
-		//$instance[]
+		?><h4>Our Quality Certifications</h4><?php
+		$certifications = explode( ',', $instance['certifications'] );
+		if ( $instance['certifications'] !== '' ) {
+			foreach ( $certifications as $cert ) {
+				?><img src="<?php echo $cert; ?>" alt="Certification" height="125"> <?php
+			}
+		}
 	}
 	
 	public function form( $instance ) {
 		wp_enqueue_media();
 		?>
 		<div class="uploader">
-			<input id="_unique_name" name="settings[_unique_name]" type="text" />
-			<input id="_unique_name_button" class="button" name="_unique_name_button" type="text" value="Upload" />
+			<input id="<?php echo $this->get_field_id( 'certifications' ); ?>" name="<?php echo $this->get_field_name('certifications'); ?>"
+				type="text" value="<?php echo esc_url( $instance['certifications'] ); ?>" />
+			<button id="_unique_name_button" type="button" class="button" name="_unique_name_button">Upload</button>
 		</div>
 		<script>
 		jQuery(document).ready(function($){
@@ -29,11 +35,17 @@ class JABon_Certifications_Widget extends WP_Widget {
 			$('#_unique_name_button').click(function(e) {
 				var send_attachment_bkp = wp.media.editor.send.attachment;
 				var button = $(this);
-				var id = button.attr('id').replace('_button', '');
+				var id = '<?php echo $this->get_field_id( 'certifications' ); ?>';
 				_custom_media = true;
 				wp.media.editor.send.attachment = function(props, attachment){
 					if ( _custom_media ) {
-						$("#"+id).val(attachment.url);
+						var urls = $("#"+id).val();
+						if ( $("#"+id).val() !== '' ) {
+							urls += ',' + attachment.url;
+						} else {
+							urls = attachment.url;
+						}
+						$("#"+id).val(urls);
 					} else {
 						return _orig_send_attachment.apply( this, [props, attachment] );
 					};
@@ -52,6 +64,8 @@ class JABon_Certifications_Widget extends WP_Widget {
 	}
 	
 	public function update( $new_instance, $old_instance ) {
-		
+		$instance = array();
+		$instance['certifications'] = $new_instance['certifications'];
+		return $instance;
 	}
 }
