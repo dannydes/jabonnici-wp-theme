@@ -8,7 +8,7 @@ the_post();
 <div class="page-header">
 	<h1><?php the_title(); ?></h1>
 </div>
-<time><?php the_time( get_option( 'date_format' ) ); ?></time>
+<small>Posted on <time><?php the_time( get_option( 'date_format' ) ); ?></time>.</small>
 <?php if ( is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
 	<a class="btn btn-default" href="<?php echo admin_url(); ?>post.php?post=<?php the_ID(); ?>&action=edit" role="button">Edit</a>
 <?php endif; ?>
