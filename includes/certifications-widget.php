@@ -11,7 +11,7 @@ class JABon_Certifications_Widget extends WP_Widget {
 	
 	public function widget( $args, $instance ) {
 		?><h4>Quality Certifications</h4><?php
-		$instance[]
+		//$instance[]
 	}
 	
 	public function form( $instance ) {
