@@ -1,12 +1,5 @@
 <?php
 
-/*
-Theme Name: J. & A. Bonnici
-Author: Daniel Desira
-Author URI: http://dannydes.github.io
-Version: 0.2
-*/
-
 get_header();
 
 get_sidebar();
