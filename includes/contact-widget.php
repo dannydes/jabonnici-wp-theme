@@ -43,19 +43,19 @@ class JABon_Contact_Widget extends WP_Widget {
 		?>
 		<label for="<?php echo $this->get_field_id( 'address_line_1' ); ?>">Address Line 1</label>
 		<input type="text" id="<?php echo $this->get_field_id( 'address_line_1' ); ?>" name="<?php echo $this->get_field_name( 'address_line_1' ); ?>"
-			value="<?php echo esc_attr( $address_line_1 ); ?>">
+			value="<?php echo esc_attr( $address_line_1 ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'address_line_2' ); ?>">Address Line 2</label>
 		<input type="text" id="<?php echo $this->get_field_id( 'address_line_2' ); ?>" name="<?php echo $this->get_field_name( 'address_line_2' ); ?>"
-			value="<?php echo esc_attr( $address_line_2 ); ?>">
+			value="<?php echo esc_attr( $address_line_2 ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'address_line_3' ); ?>">Address Line 3</label>
 		<input type="text" id="<?php echo $this->get_field_id( 'address_line_3' ); ?>" name="<?php echo $this->get_field_name( 'address_line_3' ); ?>"
-			value="<?php echo esc_attr( $address_line_3 ); ?>">
+			value="<?php echo esc_attr( $address_line_3 ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'address_line_4' ); ?>">Address Line 4</label>
 		<input type="text" id="<?php echo $this->get_field_id( 'address_line_4' ); ?>" name="<?php echo $this->get_field_name( 'address_line_4' ); ?>"
-			value="<?php echo esc_attr( $address_line_4 ); ?>">
+			value="<?php echo esc_attr( $address_line_4 ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'phone' ); ?>">Phone</label>
 		<input type="number" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>"
-			value="<?php echo esc_attr( $phone ); ?>">
+			value="<?php echo esc_attr( $phone ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'email' ); ?>">Email</label>
 		<input type="email" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>"
 			value="<?php echo esc_attr( $email ); ?>">

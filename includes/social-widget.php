@@ -37,13 +37,13 @@ class JABon_Social_Widget extends WP_Widget {
 		?>
 		<label for="<?php echo $this->get_field_id( 'facebook' ); ?>">Facebook</label>
 		<input type="url" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>"
-			value="<?php echo esc_attr( $facebook ); ?>">
+			value="<?php echo esc_attr( $facebook ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'twitter' ); ?>">Twitter</label>
 		<input type="url" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>"
-			value="<?php echo esc_attr( $twitter ); ?>">
+			value="<?php echo esc_attr( $twitter ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'linkedin' ); ?>">LinkedIn</label>
 		<input type="url" id="<?php echo $this->get_field_id( 'linkedin' ); ?>" name="<?php echo $this->get_field_name( 'linkedin' ); ?>"
-			value="<?php echo esc_attr( $linkedin ); ?>">
+			value="<?php echo esc_attr( $linkedin ); ?>"><br>
 		<label for="<?php echo $this->get_field_id( 'googleplus' ); ?>">Google+</label>
 		<input type="url" id="<?php echo $this->get_field_id( 'googleplus' ); ?>" name="<?php echo $this->get_field_name( 'googleplus' ); ?>"
 			value="<?php echo esc_attr( $googleplus ); ?>">
