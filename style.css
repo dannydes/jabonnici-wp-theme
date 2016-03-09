@@ -1,9 +1,14 @@
 /*
 Theme Name: J. & A. Bonnici
+Description: Theme designed specifically for J. & A. Bonnici.
 Author: Daniel Desira
 Author URI: http://dannydes.github.io
 Version: 0.3
 */
+
+/**
+ *
+ */
 
 body { padding-top: 50px; }
 body > .container { width: 75%; }
