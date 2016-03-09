@@ -4,4 +4,5 @@
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</div>
 <?php endif; ?>
+	<p class="sidebar-info">Hover me.</p>
 </div>
