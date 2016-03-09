@@ -81,6 +81,14 @@ function jabon_widgets_init() {
 		'before_widget' => '',
 		'after_widget' => '',
 	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Sidebar', 'jabon_sidebar' ),
+		'id' => 'sidebar',
+		'description' => 'Sidebar.',
+		'before_widget' => '',
+		'after_widget' => '',
+	) );
 }
 
 add_action( 'widgets_init', 'jabon_widgets_init' );

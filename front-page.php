@@ -2,6 +2,8 @@
 
 get_header();
 
+get_sidebar();
+
 the_post();
 
 the_content();

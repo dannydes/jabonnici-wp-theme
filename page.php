@@ -2,6 +2,8 @@
 
 get_header();
 
+get_sidebar();
+
 the_post();
 
 $page_ancestors = get_post_ancestors( get_the_ID() );

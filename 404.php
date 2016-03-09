@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+
+get_header();
+
+get_sidebar();
+
+?>
 <div class="page-header">
 	<h1>Page not found!</h1>
 </div>
