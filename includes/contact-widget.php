@@ -1,6 +1,12 @@
 <?php
 
+/**
+ * Contact widget class.
+ */
 class JABon_Contact_Widget extends WP_Widget {
+	/**
+	 * Widget constructor.
+	 */
 	function __construct() {
 		parent::__construct(
 			'jabon_contact_widget',
@@ -9,6 +15,11 @@ class JABon_Contact_Widget extends WP_Widget {
 		);
 	}
 	
+	/**
+	 * Renders widget.
+	 * @param args Widget area args.
+	 * @param instance Widget settings.
+	 */
 	public function widget( $args, $instance ) {
 		$phone = $instance['phone'];
 		$email = $instance['email'];
@@ -32,6 +43,10 @@ class JABon_Contact_Widget extends WP_Widget {
 		
 	}
 	
+	/**
+	 * Renders widget settings form.
+	 * @param instance Widget settings.
+	 */
 	public function form( $instance ) {
 		$address_line_1 = $instance['address_line_1'];
 		$address_line_2 = $instance['address_line_2'];
@@ -63,6 +78,11 @@ class JABon_Contact_Widget extends WP_Widget {
 		
 	}
 	
+	/**
+	 * Updates widget settings.
+	 * @param new_instance New widget settings.
+	 * @param old_instance Old widget settings.
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['address_line_1'] = $new_instance['address_line_1'];

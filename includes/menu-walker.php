@@ -1,11 +1,27 @@
 <?php
 
+/**
+ * Custom navigation menu walker class.
+ */
 class JABon_Nav_Menu_Walker extends Walker_Nav_Menu {
+	/**
+	 * Renders submenu parents.
+	 * @param output The markup to be rendered.
+	 * @param depth Depth within menu.
+	 * @param args Further arguments.
+	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
 	}
 	
+	/**
+	 * Renders menu items.
+	 * @param output The markup to be rendered.
+	 * @param depth Depth within menu.
+	 * @param args Further arguments.
+	 * @param id Menu item ID.
+	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 

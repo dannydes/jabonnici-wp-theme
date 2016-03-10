@@ -1,6 +1,12 @@
 <?php
 
+/**
+ * Certifications widget.
+ */
 class JABon_Certifications_Widget extends WP_Widget {
+	/**
+	 * Widget constructor.
+	 */
 	function __construct() {
 		parent::__construct(
 			'jabon_certifications_widget',
@@ -9,6 +15,11 @@ class JABon_Certifications_Widget extends WP_Widget {
 		);
 	}
 	
+	/**
+	 * Renders widget.
+	 * @param args Widget area args.
+	 * @param instance Widget settings.
+	 */
 	public function widget( $args, $instance ) {
 		?><h4>Our Quality Certifications</h4><?php
 		$certifications = explode( ',', $instance['certifications'] );
@@ -19,6 +30,10 @@ class JABon_Certifications_Widget extends WP_Widget {
 		}
 	}
 	
+	/**
+	 * Renders widget settings form.
+	 * @param instance Widget settings.
+	 */
 	public function form( $instance ) {
 		wp_enqueue_media();
 		?>
@@ -63,6 +78,11 @@ class JABon_Certifications_Widget extends WP_Widget {
 		<?php
 	}
 	
+	/**
+	 * Updates widget settings.
+	 * @param new_instance New widget settings.
+	 * @param old_instance Old widget settings.
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['certifications'] = $new_instance['certifications'];

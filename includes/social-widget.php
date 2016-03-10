@@ -1,6 +1,12 @@
 <?php
 
+/**
+ * Social widget class.
+ */
 class JABon_Social_Widget extends WP_Widget {
+	/**
+	 * Widget constructor.
+	 */
 	function __construct() {
 		parent::__construct(
 			'jabon_social_widget',
@@ -9,6 +15,11 @@ class JABon_Social_Widget extends WP_Widget {
 		);
 	}
 	
+	/**
+	 * Renders widget.
+	 * @param args Widget area args.
+	 * @param instance Widget settings.
+	 */
 	public function widget( $args, $instance ) { ?>
 		<h4>Follow Us</h4>
 		<?php if ( ! empty( $instance['facebook'] ) ): ?>
@@ -28,6 +39,10 @@ class JABon_Social_Widget extends WP_Widget {
 		<?php endif;
 	}
 	
+	/**
+	 * Renders widget settings form.
+	 * @param instance Widget settings.
+	 */
 	public function form( $instance ) {
 		$facebook = $instance['facebook'];
 		$twitter = $instance['twitter'];
@@ -51,6 +66,11 @@ class JABon_Social_Widget extends WP_Widget {
 		
 	}
 	
+	/**
+	 * Updates widget settings.
+	 * @param new_instance New widget settings.
+	 * @param old_instance Old widget settings.
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ? strip_tags( $new_instance['facebook'] ) : '' );

@@ -7,7 +7,7 @@ Version: 0.3
 */
 
 /**
- *
+ * General styling.
  */
 
 body { padding-top: 50px; }
@@ -16,6 +16,9 @@ body > .container { width: 75%; }
 .navbar, .sidebar { opacity: 0.95; }
 .navbar-brand > img { display: inline; }
 
+/**
+ * Sidebar placement and display properties.
+ */
 .sidebar {
 	position: fixed;
 	top: 150px;
@@ -31,23 +34,12 @@ body > .container { width: 75%; }
 	transition: width 100ms;
 }
 
-.sidebar > .widget-area {
-	display: none;
-}
-
-.sidebar-info {
-	transform: rotate(270deg);
-}
-
 .sidebar:hover {
 	width: 200px;
 	max-height: none;
 }
 
-.sidebar:hover > .widget-area {
-	display: inline;
-}
-
-.sidebar:hover > .sidebar-info {
-	display: none;
-}
+.sidebar > .widget-area { display: none; }
+.sidebar-info { transform: rotate(270deg); }
+.sidebar:hover > .widget-area { display: inline; }
+.sidebar:hover > .sidebar-info {	display: none; }
