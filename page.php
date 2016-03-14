@@ -30,7 +30,6 @@ if ( count( $page_children ) ): ?>
 	<a class="btn btn-default" href="<?php echo the_permalink( $page_id ); ?>" role="button"><?php echo esc_html( get_the_title( $page_id ) ); ?></a>
 	<?php endforeach; ?>
 </div>
-<div class=""></div>
 <?php endif;
 
 the_content();
