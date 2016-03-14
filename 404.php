@@ -10,6 +10,7 @@ get_sidebar();
 </div>
 <div class="well">
 	<p>Please check the URL.</p>
+	<p>If you're here by error, go back to <a href="<?php echo esc_url( home_url( '/' ) ); ?>">homepage.</a></p>
 	<div class="row">
 		<div class="col-md-4 col-xs-12"></div>
 		<div class="col-md-4 col-xs-12">
