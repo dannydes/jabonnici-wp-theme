@@ -3,7 +3,7 @@ Theme Name: J. & A. Bonnici
 Description: Theme designed specifically for J. & A. Bonnici.
 Author: Daniel Desira
 Author URI: http://dannydes.github.io
-Version: 0.4
+Version: 0.5
 */
 
 /**
@@ -13,6 +13,7 @@ Version: 0.4
 body { padding-top: 50px; }
 body > .container { width: 75%; }
 .footer { background-color: #f5f5f5; }
+.sad-face { font-size: 150px; }
 .navbar, .sidebar { opacity: 0.95; }
 .navbar-brand > img { display: inline; }
 
